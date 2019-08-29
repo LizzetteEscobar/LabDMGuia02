@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if(getSupportActionBar()!=null) {
-            getSupportActionBar().hide();
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setTitle("Guia02");
         }
         edtNombre=findViewById(R.id.edtNombre);
         edtApellido=findViewById(R.id.edtApellido);

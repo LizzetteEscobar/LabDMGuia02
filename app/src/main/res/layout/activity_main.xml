@@ -10,73 +10,35 @@
     <TextView
         android:layout_marginTop="25dp"
         android:layout_gravity="center"
-        android:text="Guia 2"
+        android:text="Ingrese sus datos"
         android:textSize="25sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <EditText
         android:inputType="textPersonName"
-        android:id="@+id/edtNombre"
+        android:id="@+id/edtCorreo"
         android:layout_marginTop="10dp"
         android:layout_marginRight="50dp"
         android:layout_marginLeft="50dp"
-        android:hint="Nombre"
+        android:hint="Correo Electronico"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
         android:inputType="textPersonName"
-        android:id="@+id/edtApellido"
+        android:id="@+id/edtPass"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:hint="Apellido"
+        android:hint="Contraseña"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <EditText
-        android:inputType="textPersonName"
-        android:id="@+id/edtCarrera"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:hint="Carrera del estudiante"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <EditText
-        android:inputType="textPersonName"
-        android:id="@+id/edtPasatiempo"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:hint="Pasatiempo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <LinearLayout
-        android:layout_marginTop="35dp"
-        android:orientation="horizontal"
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
         <Button
-            android:id="@+id/btnGuardar"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:id="@+id/btnIniciar"
             android:text="Guardar"
-            android:layout_weight="1"
-            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/btnCancelar"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_weight="1"
-            android:text="Cancelar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
 
 </LinearLayout>
