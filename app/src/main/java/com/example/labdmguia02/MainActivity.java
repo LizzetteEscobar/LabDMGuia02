@@ -10,8 +10,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText edtNombre, edtApellido, edtCarrera, edtPasatiempo;
-    Button btnGuardar, btnCancelar;
+    EditText edtCorreo, edtPass;
+    Button btnIniciar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,29 +19,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(getSupportActionBar()!=null){
             getSupportActionBar().setTitle("Guia02");
         }
-        edtNombre=findViewById(R.id.edtNombre);
-        edtApellido=findViewById(R.id.edtApellido);
-        edtCarrera=findViewById(R.id.edtCarrera);
-        edtPasatiempo=findViewById(R.id.edtPasatiempo);
-        btnGuardar=findViewById(R.id.btnGuardar);
-        btnCancelar=findViewById(R.id.btnCancelar);
+        edtCorreo=findViewById(R.id.edtCorreo);
+        edtPass=findViewById(R.id.edtPass);
 
-        btnGuardar.setOnClickListener(this);
-        btnCancelar.setOnClickListener(this);
+        btnIniciar.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btnGuardar:{
-                String nombre=edtNombre.getText().toString();
-                String apellido=edtApellido.getText().toString();
-                String carrera=edtCarrera.getText().toString();
-                String pasatiempo=edtPasatiempo.getText().toString();
+            case R.id.btnIniciar:{
+                String Correo=edtCorreo.getText().toString();
+                String Pass=edtPass.getText().toString();
 
                 Intent in=new Intent(this, SegundaPantalla.class);
-                in.putExtra("Nombre", nombre);
-                in.putExtra("Apellido", apellido);
+                in.putExtra("Correo", Correo);
+                in.putExtra("Conraseña", Pass);
                 startActivity(in);
             }
             break;
