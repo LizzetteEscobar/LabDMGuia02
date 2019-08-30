@@ -8,11 +8,48 @@
     tools:context=".SegundaPantalla">
 
     <TextView
-        android:id="@+id/lblNombre"
+        android:id="@+id/lblFruta"
         android:layout_marginTop="25dp"
         android:layout_gravity="center"
-        android:textSize="25sp"
-        android:text="Nombre"
+        android:textSize="21sp"
+        android:text="Digite su fruta favorita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <AutoCompleteTextView
+        android:layout_marginTop="25dp"
+        android:id="@+id/ACTFruta"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:hint="Animal favorito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/lblLenguaje"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:textSize="21sp"
+        android:gravity="center"
+        android:text="Digite su lenguaje de programacion favorito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <AutoCompleteTextView
+        android:layout_marginTop="25dp"
+        android:id="@+id/ACTLenguaje"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:hint="Lenguaje de programacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/lblAnimal"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:textSize="21sp"
+        android:text="Digite su animal favorito"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

@@ -25,21 +25,22 @@
         android:layout_height="wrap_content" />
 
     <EditText
-        android:inputType="textPersonName"
         android:id="@+id/edtPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:hint="Contraseña"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:inputType="textPassword" />
 
-        <Button
-            android:id="@+id/btnIniciar"
-            android:text="Iniciar Sesion"
-            android:layout_marginTop="25dp"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnIniciar"
+        android:text="Iniciar Sesion"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

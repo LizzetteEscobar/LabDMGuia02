@@ -1,22 +1,23 @@
 package com.example.labdmguia02;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.graphics.Color;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.os.Bundle;
 import android.view.View;
 
 public class SegundaPantalla extends AppCompatActivity implements View.OnLongClickListener {
 
-    TextView lblNombre;
     ProgressBar ejemPBAR;
     Button btnProcesar;
     AutoCompleteTextView ACTAnimal;
     String [] animal={"Lechuza", "Perros", "Gatos", "Loros"};
+    AutoCompleteTextView ACTLenguaje;
+    String [] lenguaje={"C++", "C#", "JAVA","PHP"};
+    AutoCompleteTextView ACTFruta;
+    String [] fruta={"Manzana", "Naranja", "Uvas", "Mango"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +26,14 @@ public class SegundaPantalla extends AppCompatActivity implements View.OnLongCli
         if(getSupportActionBar()!=null){
             getSupportActionBar().setTitle("Guia02");
         }
-        String nombre= getIntent().getStringExtra("Nombre");
-        String apellido= getIntent().getStringExtra("Apellido");
 
-        lblNombre=findViewById(R.id.lblNombre);
-        lblNombre.setText(nombre+" "+apellido);
         ACTAnimal=findViewById(R.id.ACTAnimal);
+        ACTFruta=findViewById(R.id.ACTFruta);
+        ACTLenguaje=findViewById(R.id.ACTLenguaje);
 
         ArrayAdapter<String> adapter=new ArrayAdapter<>(this, android.R.layout.select_dialog_item, animal);
+        //ArrayAdapter<String> adapter=new ArrayAdapter<>(this, android.R.layout.select_dialog_item, fruta);
+        //ArrayAdapter<String> adapter=new ArrayAdapter<>(this, android.R.layout.select_dialog_item, lenguaje);
 
         ACTAnimal.setThreshold(1);
         ACTAnimal.setAdapter(adapter);
