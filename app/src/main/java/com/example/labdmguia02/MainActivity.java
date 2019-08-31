@@ -34,16 +34,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnIniciar:{
                 String correo=edtCorreo.getText().toString();
                 String pass=edtPass.getText().toString();
+                boolean sesion = false;
 
-                if(edtCorreo.getText().toString().isEmpty()){
-                    Toast.makeText(this,"Campo Correo Vacio", Toast.LENGTH_LONG).show();
-                }else{
-                    if(edtPass.getText().toString().isEmpty()){
-                        Toast.makeText(this,"Campo Contraseña Vacio", Toast.LENGTH_LONG).show();
+                if(edtCorreo.getText().toString().isEmpty() && edtPass.getText().toString().isEmpty()){
+                    Toast.makeText(this,"Los campos estan vacios", Toast.LENGTH_LONG).show();
+                }else {
+                    if (edtCorreo.getText().toString().isEmpty()){
+                        Toast.makeText(this,"Llenar Campo Vacio", Toast.LENGTH_LONG).show();
+                    }else {
+                        if (edtPass.getText().toString().isEmpty()){
+                            Toast.makeText(this,"Llenar Campo Vacio", Toast.LENGTH_LONG).show();
+                        }else {
+                            sesion = true;
+                            Intent in = new Intent(this, SegundaPantalla.class);
+                            startActivity(in);
+                        }
                     }
                 }
-                Intent in=new Intent(this, SegundaPantalla.class);
-                startActivity(in);
             }
             break;
         }

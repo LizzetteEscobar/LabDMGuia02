@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class SegundaPantalla extends AppCompatActivity implements View.OnLongClickListener {
 
@@ -31,16 +32,35 @@ public class SegundaPantalla extends AppCompatActivity implements View.OnLongCli
         ACTFruta=findViewById(R.id.ACTFruta);
         ACTLenguaje=findViewById(R.id.ACTLenguaje);
 
-        ArrayAdapter<String> adapter=new ArrayAdapter<>(this, android.R.layout.select_dialog_item, animal);
-        //ArrayAdapter<String> adapter=new ArrayAdapter<>(this, android.R.layout.select_dialog_item, fruta);
-        //ArrayAdapter<String> adapter=new ArrayAdapter<>(this, android.R.layout.select_dialog_item, lenguaje);
+        ArrayAdapter<String> adapterAnimal = new ArrayAdapter<>(this, android.R.layout.select_dialog_item, animal);
+        ArrayAdapter<String> adapterFruta = new ArrayAdapter<>(this, android.R.layout.select_dialog_item, fruta);
+        ArrayAdapter<String> adapterLenguaje=new ArrayAdapter<>(this, android.R.layout.select_dialog_item, lenguaje);
 
         ACTAnimal.setThreshold(1);
-        ACTAnimal.setAdapter(adapter);
+        ACTAnimal.setAdapter(adapterAnimal);
+
+        ACTFruta.setThreshold(1);
+        ACTFruta.setAdapter(adapterFruta);
+
+        ACTLenguaje.setThreshold(1);
+        ACTLenguaje.setAdapter(adapterLenguaje);
+
         ejemPBAR=findViewById(R.id.ejemPBAR);
         btnProcesar=findViewById(R.id.btnProcesar);
 
-        btnProcesar.setOnLongClickListener(this);
+        btnProcesar.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                setProgressValue(0);
+                Resultados();
+                return false;
+            }
+        });
+    }
+
+    public void Resultados(){
+        Toast.makeText(this,"Animal Seleccionado: " + ACTAnimal.getText()+"\n"+
+                "Fruta Seleccionada: " + ACTFruta.getText()+"\n"+"Lenguaje Seleccionado: " + ACTLenguaje.getText(),Toast.LENGTH_SHORT).show();
     }
 
     private void setProgressValue(final int progress){

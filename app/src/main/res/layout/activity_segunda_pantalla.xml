@@ -21,7 +21,7 @@
         android:id="@+id/ACTFruta"
         android:layout_marginRight="50dp"
         android:layout_marginLeft="50dp"
-        android:hint="Animal favorito"
+        android:hint="Fruta favorito"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -73,8 +73,8 @@
     <Button
         android:id="@+id/btnProcesar"
         android:layout_width="wrap_content"
-        android:text="Procesar"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_height="wrap_content" />
+        android:text="Procesar" />
 
 </LinearLayout>
